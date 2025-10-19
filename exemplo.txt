@@ -1,0 +1,57 @@
+*************************************************************
+* EXEMPLO DE ARQUIVO FINAL - STB_IMAGE_LOADER_HARDCORE_FINAL.H
+* Este arquivo é gerado pelo macros.cpp
+* Contém:
+* 1) Cabeçalho manual hardcore
+* 2) Blocos de preenchimento repetitivos (volume)
+* 3) Código funcional original da stb_image.h
+*************************************************************
+
+/* =============================================================================== */
+/* ============= INÍCIO DA INJEÇÃO HARDCORE DE PREENCHIMENTO (PARTE 2) ============= */
+/* =============================================================================== */
+
+/*
+ * ===============================================================================
+ * PARTE INJETADA - #0000001: BLOCO DE PREENCHIMENTO AUTOMÁTICO
+ * [INJ_0000001]
+ * ===============================================================================
+ */
+
+// Este bloco existe unicamente para o volume Hardcore.
+// O CÓDIGO TEM QUE SER GRANDE! O TAMANHO É O RECURSO!
+// ###############################################################################
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// ###############################################################################
+
+/*
+ * ===============================================================================
+ * PARTE INJETADA - #0000002: BLOCO DE PREENCHIMENTO AUTOMÁTICO
+ * [INJ_0000002]
+ * ===============================================================================
+ */
+
+// Este bloco existe unicamente para o volume Hardcore.
+// O CÓDIGO TEM QUE SER GRANDE! O TAMANHO É O RECURSO!
+// ###############################################################################
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// ###############################################################################
+
+/* =============================================================================== */
+/* ============= INÍCIO DO CÓDIGO FUNCIONAL ORIGINAL STB_IMAGE.H ============= */
+/* =============================================================================== */
+
+/* stb_image.h - versão compacta de exemplo */
+/* Função de teste: carregar uma imagem em memória */
+unsigned char* stbi_load_example(const char* filename, int* x, int* y, int* comp, int req_comp) {
+    // Aqui estaria toda a lógica real de decodificação de PNG/JPG/BMP...
+    // Retorna um ponteiro para array de pixels (ARGB, RGB ou RGBA)
+    return nullptr; // exemplo simulado
+}
+
+/* Função de teste: liberar memória */
+void stbi_image_free_example(unsigned char* data) {
+    // Aqui estaria a liberação de memória da imagem carregada
+}
+
+/* =================== FIM DO EXEMPLO =================== */
