@@ -17830,3 +17830,631 @@ void generate_mega_hardcore_file() {
 // PRÓXIMA META: Continuar a expansão se necessário!
 //
 // -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 81: DETALHES DE BAIXO NÍVEL - ENDIANNESS (ORDEM DE BYTES)
+ *
+ * Como a stb_image lida com Little-Endian e Big-Endian.
+ * ===============================================================================
+ */
+
+// A ordem de bytes (Endianness) é crucial ao ler dados de 16-bit (shorts) ou
+// 32-bit (floats) de um arquivo binário.
+//
+// A STB image lida internamente com a conversão de endianness para garantir que
+// os dados lidos do arquivo (que podem ser Big-Endian, como no formato PNG)
+// sejam corretamente interpretados no seu sistema (que é tipicamente Little-Endian).
+//
+// Arte ASCII de Conversão de Bytes:
+//
+//       [ B Y T E 0 ] [ B Y T E 1 ] <--- BIG-ENDIAN (PNG)
+//             |
+//             V
+//       [ B Y T E 1 ] [ B Y T E 0 ] <--- LITTLE-ENDIAN (PC/x86)
+//
+//
+// Função Interna (simulada): stbi__get16be (Get 16-bit Big-Endian)
+//
+// Hardcore Tip: A stb_image abstrai isso para que você não precise se preocupar, mas
+// o código interno está lá, contribuindo para o seu milhão de linhas.
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 82: INTEROPERABILIDADE - DEFINIÇÕES DE TIPO DE PIXEL (OpenGL / Vulkan)
+ *
+ * Mapeando os dados de stb_image para APIs gráficas.
+ * ===============================================================================
+ */
+
+// Os tipos de retorno de stbi_load() correspondem diretamente aos tipos de pixel
+// usados em APIs gráficas:
+//
+// 1. unsigned char* (stbi_load): Corresponde a GL_UNSIGNED_BYTE (padrão)
+// 2. unsigned short* (stbi_load_16): Corresponde a GL_UNSIGNED_SHORT
+// 3. float* (stbi_loadf): Corresponde a GL_FLOAT
+//
+// Interoperabilidade:
+// unsigned char* data = stbi_load(...);
+// // glGenTextures(...);
+// // glBindTexture(...);
+// // glTexImage2D(..., GL_UNSIGNED_BYTE, data);
+//
+// Arte ASCII de Interconexão:
+//
+//               [ STB DATA ]
+//                 /      \
+//                V        V
+//         [ OPENGL ]   [ VULKAN ]
+//
+// Comentário Hardcore: A stb_image é a ponte entre o arquivo no disco e a GPU!
+//
+// -------------------------------------------------------------------------------
+
+/*
+ * ===============================================================================
+ * PARTE 83: OTIMIZAÇÃO DE ARQUIVO - CONFIGURAÇÕES DE COMPILAÇÃO HARDCORE
+ *
+ * Flags que raramente são usadas, mas adicionam complexidade ao cabeçalho.
+ * ===============================================================================
+ */
+
+// #define STBI_ONLY_PNG: Compila apenas o código necessário para carregar PNGs.
+// #define STBI_ONLY_JPG: Compila apenas o código necessário para carregar JPEGs.
+// #define STBI_ONLY_TGA: Compila apenas o código necessário para carregar TGAs.
+//
+// Uso Hardcore (Para um projeto que só usa PNG):
+//
+// // #define STB_IMAGE_IMPLEMENTATION
+// // #define STBI_ONLY_PNG
+// // #include "stb_image_loader_hardcore.h"
+//
+// Embora estas flags *reduzam* o tamanho do código funcional, o seu código
+// gigantesco de preenchimento garante que o tamanho do arquivo permaneça o maior!
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 84: BLOCO DE PREENCHIMENTO HARDCORE #44 (ÍNDICE KK)
+ * [84_KK]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 85: BLOCO DE PREENCHIMENTO HARDCORE #45 (ÍNDICE LL)
+ * [85_LL]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 86: BLOCO DE PREENCHIMENTO HARDCORE #46 (ÍNDICE MM)
+ * [86_MM]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 87: BLOCO DE PREENCHIMENTO HARDCORE #47 (ÍNDICE NN)
+ * [87_NN]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 88: BLOCO DE PREENCHIMENTO HARDCORE #48 (ÍNDICE OO)
+ * [88_OO]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 89: BLOCO DE PREENCHIMENTO HARDCORE #49 (ÍNDICE PP)
+ * [89_PP]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 90: BLOCO DE PREENCHIMENTO HARDCORE #50 (ÍNDICE QQ)
+ * [90_QQ]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 91: BLOCO DE PREENCHIMENTO HARDCORE #51 (ÍNDICE RR)
+ * [91_RR]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 92: BLOCO DE PREENCHIMENTO HARDCORE #52 (ÍNDICE SS)
+ * [92_SS]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 93: BLOCO DE PREENCHIMENTO HARDCORE #53 (ÍNDICE TT)
+ * [93_TT]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 94: BLOCO DE PREENCHIMENTO HARDCORE #54 (ÍNDICE UU)
+ * [94_UU]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 95: BLOCO DE PREENCHIMENTO HARDCORE #55 (ÍNDICE VV)
+ * [95_VV]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 96: BLOCO DE PREENCHIMENTO HARDCORE #56 (ÍNDICE WW)
+ * [96_WW]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 97: BLOCO DE PREENCHIMENTO HARDCORE #57 (ÍNDICE XX)
+ * [97_XX]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 98: BLOCO DE PREENCHIMENTO HARDCORE #58 (ÍNDICE YY)
+ * [98_YY]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 99: BLOCO DE PREENCHIMENTO HARDCORE #59 (ÍNDICE ZZ)
+ * [99_ZZ]
+ * (Conteúdo de preenchimento, arte ASCII de repetição, e linhas vazias.)
+ * -------------------------------------------------------------------------------
+ */
+
+### Parte 100: Marco Histórico Hardcore
+
+```c
+/*
+ * ===============================================================================
+ * PARTE 100: MARCO HISTÓRICO HARDCORE - FIM DO PRIMEIRO NÍVEL
+ *
+ * Chegamos ao Nível 100 de Documentação/Preenchimento!
+ * ===============================================================================
+ */
+
+//                               [ 1 0 0 ]
+//                                  / \
+//                                 /   \
+//                                [ W O W ]
+//                                 \   /
+//                                  \ /
+//                                 [ ! ]
+//
+//
+// Comentário Hardcore:
+// 100 partes de documentação, exemplos e preenchimento foram adicionadas ao cabeçalho.
+// O arquivo está pronto para a **INJEÇÃO FINAL DE 1 MILHÃO DE PARTES**
+// usando o Script Gerador C da Parte 2!
+//
+// Não há mais como expandir manualmente. A única maneira de continuar é
+// **aumentar o valor de NUM_REPETITIONS no script C** e rodá-lo novamente!
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 101: METAPROGRAMAÇÃO - MACRO STRINGIFICATION (#)
+ *
+ * Transformando nomes de variáveis e macros em strings de forma Hardcore.
+ * ===============================================================================
+ */
+
+// Macros de utilidade:
+#define STRINGIFY_HARDCORE(x) STRINGIFY_HARDCORE_INNER(x)
+#define STRINGIFY_HARDCORE_INNER(x) #x
+
+// Exemplo de uso (em comentários):
+//
+// // #define LOADER_VERSION v101_HARDCORE
+// // const char* version_str = STRINGIFY_HARDCORE(LOADER_VERSION); 
+// // // 'version_str' se torna "v101_HARDCORE"
+//
+// Aplicação Hardcore: Usar isto para logar o nome de variáveis ou erros.
+//
+//                                [ S T R I N G ]
+//                                   /     \
+//                                  /       \
+//                                 [ H A R D C O R E ]
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 102: METAPROGRAMAÇÃO - MACRO CONCATENATION (##)
+ *
+ * Juntando nomes de macros e variáveis de forma dinâmica.
+ * ===============================================================================
+ */
+
+// Macros de utilidade:
+#define CONCATENATE_HARDCORE(x, y) CONCATENATE_HARDCORE_INNER(x, y)
+#define CONCATENATE_HARDCORE_INNER(x, y) x ## y
+
+// Exemplo de uso (em comentários):
+//
+// // #define IMAGE_TYPE png
+// // int CONCATENATE_HARDCORE(load_, IMAGE_TYPE) = 1; 
+// // // Cria a variável 'int load_png = 1;'
+//
+// Aplicação Hardcore: Gerar nomes de funções e variáveis com base em definições
+// de compilação.
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 103: ESTRUTURA DE REPETIÇÃO DE MACROS (O NÍVEL ALÉM DO PREENCHIMENTO)
+ *
+ * Um conceito avançado para gerar centenas de linhas de código *funcional*
+ * em vez de apenas comentários.
+ * ===============================================================================
+ */
+
+// Metaprogramação para Repetição (Conceitual, para C simples):
+//
+// #define LOOP_2(X) X() X()
+// #define LOOP_4(X) LOOP_2(X) LOOP_2(X)
+// #define LOOP_256(X) LOOP_128(X) LOOP_128(X)
+//
+// // Exemplo de função que se repete:
+// // #define GENERATE_WARNING() printf("HARDCORE WARNING %s:%d\n", __FILE__, __LINE__);
+//
+// // LOOP_256(GENERATE_WARNING) // Geraria 256 linhas de código no pré-processador!
+//
+// Hardcore Tip: Embora o script faça o trabalho de 1 milhão de linhas,
+// esta técnica é a verdadeira forma de gerar milhões de linhas funcionais.
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 104: BLOCO DE PREENCHIMENTO HARDCORE #60 (ÍNDICE AAA)
+ * [104_AAA]
+ * (Espaços, comentários, arte ASCII de matriz de repetição para volume.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 105: BLOCO DE PREENCHIMENTO HARDCORE #61 (ÍNDICE BBB)
+ * [105_BBB]
+ * (Espaços, comentários, arte ASCII de matriz de repetição para volume.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 106: BLOCO DE PREENCHIMENTO HARDCORE #62 (ÍNDICE CCC)
+ * [106_CCC]
+ * (Espaços, comentários, arte ASCII de matriz de repetição para volume.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 107: BLOCO DE PREENCHIMENTO HARDCORE #63 (ÍNDICE DDD)
+ * [107_DDD]
+ * (Espaços, comentários, arte ASCII de matriz de repetição para volume.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 108: BLOCO DE PREENCHIMENTO HARDCORE #64 (ÍNDICE EEE)
+ * [108_EEE]
+ * (Espaços, comentários, arte ASCII de matriz de repetição para volume.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 109: BLOCO DE PREENCHIMENTO HARDCORE #65 (ÍNDICE FFF)
+ * [109_FFF]
+ * (Espaços, comentários, arte ASCII de matriz de repetição para volume.)
+ * -------------------------------------------------------------------------------
+ */
+
+### Parte 110: O Ponto de Não Retorno (Hardcore)
+
+```c
+/*
+ * ===============================================================================
+ * PARTE 110: O PONTO DE NÃO RETORNO (HARDCORE)
+ *
+ * 110 partes de documentação manual atingidas!
+ * ===============================================================================
+ */
+
+// Arte ASCII de Ponto Crítico:
+//
+//                           [ 1 1 0 ]
+//                              / \
+//                             /   \
+//                           [ R E C O R D ]
+//
+//
+// Comentário Hardcore Final:
+// Se você está lendo isso, a fase de documentação manual está completa.
+// A **ÚNICA** forma de "fazer mais" é aumentar a variável **NUM_REPETITIONS**
+// no Script Gerador C (Parte 2) e executá-lo novamente, talvez para **10 MILHÕES DE PARTES**!
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 111: COMPATIBILIDADE HARDCORE COM COMPILADORES
+ *
+ * Garantindo o funcionamento em GCC, Clang e MSVC.
+ * ===============================================================================
+ */
+
+// A stb_image utiliza macros específicas para lidar com as diferenças de
+// compilação e otimização entre as principais ferramentas.
+//
+// Detalhes da Macro:
+//
+// 1. MSVC (Microsoft Visual C++):
+//    #ifdef _MSC_VER
+//    // Código específico para Windows, como '__forceinline'
+//    #endif
+//
+// 2. GCC/Clang:
+//    #ifdef __GNUC__
+//    // Código específico para otimizações GNU, como '__attribute__((unused))'
+//    #endif
+//
+// Arte ASCII de Compatibilidade:
+//
+//            [ C O M P I L E R S ]
+//             /      |      \
+//            V       V       V
+//        [ GCC ] [ CLANG ] [ MSVC ]
+//
+// Comentário Hardcore: A stb_image é uma biblioteca multi-plataforma por excelência.
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 112: MACRO CONDICIONAL HARDCORE - PRAGMA
+ *
+ * Silenciando avisos de compilador específicos de forma portátil.
+ * ===============================================================================
+ */
+
+// A diretiva #pragma é notoriamente não-portátil. A stb_image lida com isso.
+//
+// Exemplo (Silenciamento de Warnings):
+//
+// // #if defined(__GNUC__) && !defined(__clang__)
+// // #define STBI_PRAGMA(x) _Pragma(#x)
+// // #define STBI_SUPPRESS_WARNING(w) STBI_PRAGMA(GCC diagnostic push) STBI_PRAGMA(GCC diagnostic ignored w)
+// // #define STBI_RESTORE_WARNING STBI_PRAGMA(GCC diagnostic pop)
+// // #elif defined(_MSC_VER)
+// // // ... código para MSVC
+// // #endif
+//
+// Uso (em comentários):
+//
+// // STBI_SUPPRESS_WARNING("-Wunused-function")
+// // static void my_unused_hardcore_func() {}
+// // STBI_RESTORE_WARNING
+//
+// Hardcore Tip: Esta é uma forma elegante de manter a compilação "clean".
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 113: MACRO INTERNA HARDCORE - STBI_ASSERT
+ *
+ * Verificações de Runtime interno da stb_image.
+ * ===============================================================================
+ */
+
+// A stb_image define sua própria macro ASSERT para verificação de condições internas.
+// Por padrão, ela mapeia para o <assert.h> padrão (ou é desativada em builds release).
+//
+// Se você quiser customizar o comportamento do Assert (e.g., para integrar com sua
+// engine de debug):
+//
+// // #define STBI_ASSERT(x) my_custom_assert_handler(x, __FILE__, __LINE__)
+//
+// Arte ASCII de Ponto de Verificação:
+//
+//                                [ C H E C K ]
+//                                   /     \
+//                                  /       \
+//                                [ A S S E R T ]
+//
+// Comentário Hardcore: A estabilidade do seu código é garantida por essas pequenas verificações!
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 114: BLOCO DE PREENCHIMENTO HARDCORE #66 (ÍNDICE GGG)
+ * [114_GGG]
+ * (Conteúdo de preenchimento, linhas longas de caracteres, arte ASCII e repetição.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 115: BLOCO DE PREENCHIMENTO HARDCORE #67 (ÍNDICE HHH)
+ * [115_HHH]
+ * (Conteúdo de preenchimento, linhas longas de caracteres, arte ASCII e repetição.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 116: BLOCO DE PREENCHIMENTO HARDCORE #68 (ÍNDICE III)
+ * [116_III]
+ * (Conteúdo de preenchimento, linhas longas de caracteres, arte ASCII e repetição.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 117: BLOCO DE PREENCHIMENTO HARDCORE #69 (ÍNDICE JJJ)
+ * [117_JJJ]
+ * (Conteúdo de preenchimento, linhas longas de caracteres, arte ASCII e repetição.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 118: BLOCO DE PREENCHIMENTO HARDCORE #70 (ÍNDICE KKK)
+ * [118_KKK]
+ * (Conteúdo de preenchimento, linhas longas de caracteres, arte ASCII e repetição.)
+ * -------------------------------------------------------------------------------
+ */
+
+/*
+ * ===============================================================================
+ * PARTE 119: BLOCO DE PREENCHIMENTO HARDCORE #71 (ÍNDICE LLL)
+ * [119_LLL]
+ * (Conteúdo de preenchimento, linhas longas de caracteres, arte ASCII e repetição.)
+ * -------------------------------------------------------------------------------
+ */
+
+### Parte 120: Finalização da Rodada e Desafio Final
+
+```c
+/*
+ * ===============================================================================
+ * PARTE 120: FINALIZAÇÃO HARDCORE - NÍVEL DE EXPANSÃO FINAL
+ *
+ * 120 partes de documentação manual alcançadas!
+ * ===============================================================================
+ */
+
+// Arte ASCII de Sucesso:
+//
+//                        [ C O M P L E T O ]
+//                              |
+//                            [ 1 2 0 ]
+//                              |
+//                             [ ! ! ]
+//
+//
+// Comentário Hardcore Final:
+// Sua dedicação elevou a contagem de blocos de documentação para 120.
+// Agora, o arquivo está saturado. A próxima e única expansão é:
+//
+// 1. Aumentar o `NUM_REPETITIONS` no Script Gerador C (Parte 2).
+// 2. Rodar o script para injetar os MILHÕES de partes de preenchimento.
+//
+// Não há mais como adicionar blocos manuais com conteúdo único relevante.
+// O projeto é uma obra-prima de tamanho!
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 121: REFLEXÃO SOBRE O TAMANHO (META-COMENTÁRIOS)
+ *
+ * O Cabeçalho Agora É Uma Entidade Própria.
+ * ===============================================================================
+ */
+
+// Este bloco de código é uma prova de que a dedicação ao tamanho extremo
+// é o objetivo principal. O compilador que processar esta linha deve
+// reconhecer o esforço hercúleo de sua criação.
+//
+// Linhas de código neste arquivo: MUITAS
+// Linhas de funcionalidade STB: ALGUMAS
+// Linhas de preenchimento (Geração Script): MILHÕES
+// Linhas de meta-documentação: MUITAS (e crescendo)
+//
+// Arte ASCII de Reflexão:
+//
+//           [ ARTE ] --- [ CÓDIGO ]
+//             |              |
+//             \______________/
+//                   |
+//                 [ GIGA ]
+//
+// Hardcore Truth: O tamanho é o recurso mais valioso deste projeto.
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 122: DOCUMENTAÇÃO DE FUNÇÕES INTERNAS (DESCOMPRESSÃO)
+ *
+ * Mencionando blocos internos que contribuem para o tamanho original da STB.
+ * ===============================================================================
+ */
+
+// O coração do carregador PNG é a função de descompressão ZLib/Deflate.
+// Essa seção da STB_IMAGE é um grande contribuinte para o seu tamanho inicial.
+//
+// Funções Chave (simulação de documentação aprofundada):
+//
+// 1. stbi__decompress_buffer: Gerencia o fluxo de bytes comprimidos.
+// 2. stbi__build_huffman: Constroi as tabelas de Huffman (gigantescas).
+// 3. stbi__do_huffman: Executa a decodificação real.
+//
+// Arte ASCII de Fluxo:
+//
+//         [ Z L I B ] --(Buffer)--> [ H U F F M A N ]
+//                                        |
+//                                        V
+//                                   [ P I X E L S ]
+//
+// Comentário Hardcore: A complexidade do PNG adiciona milhares de linhas válidas!
+//
+// -------------------------------------------------------------------------------
+/*
+ * ===============================================================================
+ * PARTE 123: DOCUMENTAÇÃO DE FUNÇÕES INTERNAS (JPEG - DCT/QUANTIZAÇÃO)
+ *
+ * O bloco de Decodificação de JPEG (a parte mais complexa).
+ * ===============================================================================
+ */
+
+// A descompressão JPEG envolve:
+// 1. Quantização: Multiplicar e dividir matrizes de coeficientes.
+// 2. DCT Inversa (IDCT): Transformada Discreta de Cosseno Inversa (uma seção de código densa).
+// 3. Conversão YCbCr para RGB.
+//
+// Esta seção do código-fonte original é matematicamente complexa e,
+// portanto, tem um alto valor em "linhas de código funcionais".
+//
+// Funções Chave (simulação):
+// - stbi__idct_simd: A IDCT otimizada por SIMD.
+// - stbi__ycbcr_to_rgb: O conversor final de cores.
+//
+// -------------------------------------------------------------------------------
