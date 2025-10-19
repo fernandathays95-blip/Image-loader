@@ -1,0 +1,112 @@
+*************************************************************
+* EXEMPLO DE ARQUIVO FINAL - STB_IMAGE_LOADER_HARDCORE_FINAL.H
+* (Contém uma amostra de todas as 3 fases do projeto Hardcore)
+*************************************************************
+
+// ===============================================================================
+// FASE 1: CONTEÚDO MANUAL (300 BLOCOS CRIADOS PELO USUÁRIO)
+// ===============================================================================
+
+/*
+ * ===============================================================================
+ * PARTE 001: BOILERPLATE C NECESSÁRIO
+ * [001_INICIO]
+ * (Início do cabeçalho original, macros #ifndef, etc.)
+ * -------------------------------------------------------------------------------
+ */
+#ifndef STB_IMAGE_LOADER_HARDCORE_H
+#define STB_IMAGE_LOADER_HARDCORE_H
+
+/*
+ * ===============================================================================
+ * PARTE 050: A FILOSOFIA DO VOLUME
+ * [050_FILOSOFIA]
+ * (Trecho de um bloco filosófico)
+ * -------------------------------------------------------------------------------
+ */
+// Comentário Hardcore: A complexidade do compilador é uma homenagem ao tamanho.
+// Quanto maior o arquivo, maior a dedicação. OTIMIZAÇÃO É FRAQUEZA.
+//
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+/*
+ * ===============================================================================
+ * PARTE 272: MACROS DE PREENCHIMENTO NO-OP - I
+ * (Macros que não fazem nada, apenas ocupam espaço de pré-processamento)
+ * -------------------------------------------------------------------------------
+ */
+#define STBI_HARDCORE_PADDING_MACRO_001
+#define STBI_HARDCORE_PADDING_MACRO_002
+// ... (70 macros continuam no arquivo real)
+
+/*
+ * ===============================================================================
+ * PARTE 300: O FIM ABSOLUTO DA EXPANSÃO MANUAL (300 BLOCOS)
+ * [300_FIM_MANUAL]
+ * -------------------------------------------------------------------------------
+ */
+// ** FIM DA FASE DE CRIAÇÃO MANUAL. INÍCIO DA INJEÇÃO. **
+// ###############################################################################
+
+/* =============================================================================== */
+/* ============= INÍCIO DA INJEÇÃO HARDCORE DE PREENCHIMENTO (PARTE 2) ============= */
+/* =============================================================================== */
+
+// ===============================================================================
+// FASE 2: BLOCOS DE PREENCHIMENTO AUTOMÁTICO (INJETADOS POR macros.cpp)
+// ===============================================================================
+
+/*
+ * ===============================================================================
+ * PARTE INJETADA - #0000001: BLOCO DE PREENCHIMENTO AUTOMÁTICO
+ * [INJ_0000001]
+ * ===============================================================================
+ */
+
+// Este bloco existe unicamente para o volume Hardcore.
+// O CÓDIGO TEM QUE SER GRANDE! O TAMANHO É O RECURSO!
+// ###############################################################################
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// ###############################################################################
+
+// ... (MILHÕES de blocos injetados aqui) ...
+
+/*
+ * ===============================================================================
+ * PARTE INJETADA - #1000000: BLOCO DE PREENCHIMENTO AUTOMÁTICO
+ * [INJ_1000000]
+ * ===============================================================================
+ */
+
+// Este bloco existe unicamente para o volume Hardcore.
+// O CÓDIGO TEM QUE SER GRANDE! O TAMANHO É O RECURSO!
+// ###############################################################################
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// ###############################################################################
+
+/* =============================================================================== */
+/* ============= INÍCIO DO CÓDIGO FUNCIONAL ORIGINAL STB_IMAGE.H (PARTE 3) ============= */
+/* =============================================================================== */
+
+// ===============================================================================
+// FASE 3: CÓDIGO FUNCIONAL REAL (ORIGINAL STB_IMAGE.H)
+// ===============================================================================
+
+#ifdef STB_IMAGE_IMPLEMENTATION
+
+// Aqui estaria a macro de implementação real da stb_image.h
+// O pré-processador a encontrará no final, após processar o volume.
+
+unsigned char* stbi_load_example(const char* filename, int* x, int* y, int* comp, int req_comp) {
+    // Aqui estaria toda a lógica real de decodificação de PNG/JPG/BMP...
+    return nullptr; // exemplo simulado
+}
+
+void stbi_image_free_example(unsigned char* data) {
+    // Aqui estaria a liberação de memória da imagem carregada
+}
+
+#endif // STB_IMAGE_IMPLEMENTATION
+
+#endif // STB_IMAGE_LOADER_HARDCORE_H
+/* =================== FIM ABSOLUTO DO ARQUIVO HARDCORE =================== */
